@@ -1,0 +1,41 @@
+*{
+	transition-duration: 1s;
+}
+h1{
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding: 5px;
+	text-shadow:2px 2px darkgrey;
+}
+body{
+	background-color: #eeeeee;
+}
+a:link,:visited {
+display: block;
+	 font-weight: bold;
+	 background-color: yellow;
+	width: 120px;
+	padding: 4px;
+	color: blue;
+       text-align: center;
+       text-decoration: none;
+  }
+a:hover {
+	color: blue;
+       background-color: orange;
+       text-decoration: underline;
+       text-transform: uppercase;
+       font-size: 150%;
+  }
+a:active {
+	color: blue;
+       background-color: red;
+       text-decoration: underline;
+  }
+canvas{
+	border: solid black 1px;	
+}
+#can{
+	border-color: transparent;
+}
