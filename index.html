@@ -29,13 +29,6 @@ var y = d3.scaleLinear()
 var line = d3.line()
     .x(function(d, i) { return x(i); })
     .y(function(d, i) { return y(d); });
-
-g.append("text")      // text label for the x axis
-        .attr("x", 265 )
-        .attr("y",  240 )
-        .style("text-anchor", "middle")
-        .text("Date");
-
 g.append("defs").append("clipPath")
     .attr("id", "clip")
   .append("rect")
@@ -44,6 +37,7 @@ g.append("defs").append("clipPath")
 g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + y(0) + ")")
+    .attr 
     .call(d3.axisBottom(x));
 g.append("g")
     .attr("class", "axis axis--y")
@@ -76,7 +70,7 @@ function tick() {
 
 </div>
 
-<div class = "secondG" ;style="font-family: comfortaaregular">Eli will make a thing here
+<div class = "secondG" ;style="font-family: comfortaaregular">Eli will make a thing here (and Aaron)
 
 
 </div>

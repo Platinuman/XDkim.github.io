@@ -23,6 +23,10 @@
     background: #ed3594;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
 .graph {
     width: 25%;
     float: left;
