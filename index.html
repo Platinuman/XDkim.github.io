@@ -29,6 +29,13 @@ var y = d3.scaleLinear()
 var line = d3.line()
     .x(function(d, i) { return x(i); })
     .y(function(d, i) { return y(d); });
+    
+svg.append("text")      // text label for the x axis
+        .attr("x", 265 )
+        .attr("y",  240 )
+        .style("text-anchor", "middle")
+        .text("Date");
+
 g.append("defs").append("clipPath")
     .attr("id", "clip")
   .append("rect")
