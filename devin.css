@@ -9,12 +9,6 @@
     box-sizing: border-box;
     font-family: 'comfortaaregular';
 }
-.title	{
-	width: 100%;
-	padding: 15px;
-	border: 1px solid red;
-	background:black;
-}
 
 .graph {
     width: 25%;
@@ -33,7 +27,7 @@
 }
 .circle {
 	float:left;
-	width: 50%;
+	width: 45%;
 	padding: 15px;
 	border: 1px solid red;
 }
