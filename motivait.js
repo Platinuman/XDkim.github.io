@@ -132,7 +132,7 @@ function clearCanvas(){
    canvas.getContext("2d").clearRect(0,0,canvas.width,canvas.height);
 }
 function distToCenter(x, y){
-   return Math.sqrt((circleCoords[0] - x) * (circleCoords[0] - x) + (circleCoords[1] - y) * (circleCoords[1] s- y));
+   return Math.sqrt((circleCoords[0] - x) * (circleCoords[0] - x) + (circleCoords[1] - y) * (circleCoords[1] - y));
 }
 function getClosestInt(f){
    return Math.round(f);
