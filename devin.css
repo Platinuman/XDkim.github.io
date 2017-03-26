@@ -11,8 +11,8 @@
 }
 
 .title {
-    padding: 15px;
     border: 1px solid red;
+    background: black;
 }
 
 .graph {
