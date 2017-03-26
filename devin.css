@@ -46,3 +46,10 @@
     padding: 15px;
     border: 1px solid red;
 }
+
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
