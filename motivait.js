@@ -132,10 +132,9 @@ function clearCanvas(){
    canvas.getContext("2d").clearRect(0,0,canvas.width,canvas.height);
 }
 function distToCenter(x, y){
-   return Math.sqrt((circleCoords[0] + 25 - x) * (circleCoords[0] + 25 - x) + (circleCoords[1] + 75 - y) * (circleCoords[1] + 75 - y));
+   return Math.sqrt((circleCoords[0] - x) * (circleCoords[0] - x) + (circleCoords[1] - y) * (circleCoords[1] s- y));
 }
 function getClosestInt(f){
    return Math.round(f);
 }
 startCanvas();
-
