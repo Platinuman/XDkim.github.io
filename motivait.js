@@ -9,7 +9,7 @@ var circleCoords = [688,480];
 var circleTexts = ["","0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ", "0\t\t\t\t\t\t1\t\t\t\t\t\t2\t\t\t\t\t\t3\t\t\t\t\t\t4\t\t\t\t\t\t5\t\t\t\t\t\t6\t\t\t\t\t\t7\t\t\t\t\t\t8\t\t\t\t\t\t9\t\t\t\t\t\t10\t\t\t\t\t\t11\t\t\t\t\t\t12+\t\t\t\t\t\t", "MON\t\t\t\t\t\t\t\tTUE\t\t\t\t\t\t\t\tWED\t\t\t\t\t\t\t\tTHU\t\t\t\t\t\t\t\tFRI\t\t\t\t\t\t\t\tSAT\t\t\t\t\t\t\t\tSUN\t\t\t\t\t\t\t\t"];
 var circleRads = [125,179,242,300];
 var textStartRads = [0,0,0,0];
-var circleColors = ['#ffffff','#61c8d6','#c6da3f','#ed3594'];
+var circleColors = ['#ffffff','#66D9EF','#A6E22E','#F92672'];
 var lastAng = 0;
 var lineAngle = 0;
 function getWeekdayInt(){
