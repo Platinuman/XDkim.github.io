@@ -115,7 +115,6 @@ function mouseMoved(event){
       angDif += Math.PI;
    }
    textStartRads[circleMoving] += angDif;
-   console.log(textStartRads[circleMoving]);
    lastAng = ang;
    addCircles();
    if(circleMoving == 3){
