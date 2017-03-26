@@ -205,5 +205,5 @@ function convertWeekday(i){
    }
 }
 
-setTimeout(startCanvas(),500);
+setTimeout(startCanvas(),2000);
 
