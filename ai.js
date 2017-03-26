@@ -1,4 +1,9 @@
-	//Creation of neural network
+
+
+
+function predict(day, time, sleep){
+	var chance = 0;
+		//Creation of neural network
 	//Layer one
 	var l1 = [0,0,0,0,0,0,0,0,0,0];
 	var l1_weights = [0,0,0,0,0,0,0,0,0,0];
@@ -11,10 +16,6 @@
 	var output = [0,0,0,0,0,0,0,0,0,0];
 
 //Initializing default values
-
-
-function predict(day, time, sleep){
-	var chance = 0;
 	for(i=0; i<10; i++){
 	l1_weights[i]=(Math.random());
 	l1_biases[i]=(Math.random());
