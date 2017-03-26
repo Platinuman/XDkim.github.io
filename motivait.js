@@ -169,6 +169,9 @@ context.beginPath();
     context.lineTo(300-20, 10);
     context.lineTo(300+20, 10);
     context.fill();
+    context.font="70px comfortaaregular";
+    context.fillText(predict(getWeekdayFloat, getTimeOfDayFloat, getHoursSleptFloat), 688-60, 480+20);
+
 }
 function clearCanvas(){
    canvas.getContext("2d").clearRect(0,0,canvas.width,canvas.height);
@@ -205,5 +208,52 @@ function convertWeekday(i){
    }
 }
 
-setTimeout(startCanvas(),10000);
+//Start Canvas
+startCanvas();
+
+//Neural Network
+  //Creation of neural network
+  //Layer one
+  var l1 = [0,0,0,0,0,0,0,0,0,0];
+  var l1_weights = [];
+  var l1_biases = [];
+  //Layer two
+  var l2 = [0,0,0,0,0,0,0,0,0,0];
+  var l2_weights = [];
+  var l2_biases = [];
+  //Output layer
+  var output = [];
+
+//Initializing default values
+for(i=0; i<10; i++){
+  l1_weights.push(Math.random());
+  l1_biases.push(Math.random());
+  l2_weights.push(Math.random());
+  l2_biases.push(Math.random());
+  output.push(Math.random());
+} 
+
+function predict(day, time, sleep){
+  var chance = 0;
+
+  for(i=0; i<10; i++){
+    l1[i]+=day*l1_weights[i] + time*l1_weights[i] + sleep*l1_weights[i];
+    l1[i]+=l1_biases[i];
+  }
+
+  for(i=0; i<10; i++){
+    for(j=0; j<10; j++){
+      l2[i]+=l1[j]*l2_weights[j];
+    }
+    l2[i]+=l2_biases[i];
+  }
+
+  for(i=0; i<10; i++){
+    chance+=l2[i]*output[i] 
+  }
+  chance=Math.min(100,chance);
+  chance=Math.max(0, chance);
+  console.log(chance)
+  return chance;
+}
 
