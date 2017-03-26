@@ -11,17 +11,17 @@
 	var output = [];
 
 //Initializing default values
-for(i=0; i<10; i++){
+
+
+function predict(day, time, sleep){
+	var chance = 0;
+	for(i=0; i<10; i++){
 	l1_weights.push(Math.random());
 	l1_biases.push(Math.random());
 	l2_weights.push(Math.random());
 	l2_biases.push(Math.random());
 	output.push(Math.random());
 }	
-
-function predict(day, time, sleep){
-	var chance = 0;
-
 	for(i=0; i<10; i++){
 		l1[i]+=day*l1_weights[i] + time*l1_weights[i] + sleep*l1_weights[i];
 		l1[i]+=l1_biases[i];
