@@ -78,6 +78,7 @@ function startCanvas(){
    canvas.addEventListener('mousedown', mouseDowned, false);
    canvas.addEventListener('mousemove', mouseMoved, false);
    canvas.addEventListener('mouseup',mouseLifted,false);
+   context.font = "30px comfortaaregular";
    addCircles();
 }
 function mouseDowned(event){
@@ -157,7 +158,7 @@ function addCircles(){
    for(i = circleRads.length - 1; i > -1; i--){
       drawCircle(300, 350, circleRads[i], circleColors[i]);
       context.font = "30px comfortaaregular";
-        context.fillStyle = "#ffffff";
+      context.fillStyle = "#ffffff";
       context.fillTextCircle(circleTexts[i],300,350,circleRads[i] - 38,textStartRads[i]);
    }
 changeColor(circleColors[3]);
@@ -204,3 +205,4 @@ function convertWeekday(i){
    }
 }
 startCanvas();
+
