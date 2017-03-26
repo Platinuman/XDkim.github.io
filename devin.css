@@ -46,14 +46,17 @@
 .day {
     padding: 15px;
     border: 1px solid red;
+	color:#ed3594;
 }
 .sleep {
     padding: 15px;
     border: 1px solid red;
+	color:#c6da3f;
 }
 .time {
     padding: 15px;
     border: 1px solid red;
+	color:#61c8d6;
 }
 
 
@@ -82,5 +85,6 @@
     border: 1px solid red;
 }
 h1 {
+	line-height: 0.1em;
 	text-align: right;
 }
