@@ -5,6 +5,13 @@
     font-weight: normal;
     font-style: normal;
 }
+#preloadfont {
+    font-family: 'comfortaaregular';
+    src: url('comfortaa_regular-webfont.woff2') format('woff2'),
+         url('comfortaa_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     font-family: 'comfortaaregular';
@@ -39,21 +46,17 @@
     width: 25%;
     float: left;
     padding: 15px;
-    border: 1px solid red;
 }
 .day {
     padding: 15px;
-    border: 1px solid red;
 	color:#ed3594;
 }
 .sleep {
     padding: 15px;
-    border: 1px solid red;
 	color:#c6da3f;
 }
 .time {
     padding: 15px;
-    border: 1px solid red;
 	color:#61c8d6;
 }
 
