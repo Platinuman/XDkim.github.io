@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+.title	{
+	width: 100%;
+	padding: 15px;
+	border: 1px solid red;
+}
+
+.graph {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.firstG {
+    padding: 15px;
+    border: 1px solid red;
+}
+.secondG {
+    padding: 15px;
+    border: 1px solid red;
+}
+.circle {
+	float:left;
+	width: 50%;
+	padding: 15px;
+	border: 1px solid red;
+}
+
+.text {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.day {
+    padding: 15px;
+    border: 1px solid red;
+}
+.sleep {
+    padding: 15px;
+    border: 1px solid red;
+}
+.time {
+    padding: 15px;
+    border: 1px solid red;
+}
+
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
