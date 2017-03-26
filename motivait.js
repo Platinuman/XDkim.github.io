@@ -123,25 +123,25 @@ function mouseMoved(event){
    else if(circleMoving == 2){
       var hrs = getHoursSleptInt();
       if(hrs < 12){
-         $("sleep").innerHTML = hrs;
+         $("sleepField").innerHTML = hrs;
       }
       else{
-         $("sleep").innerHTML = "12+";
+         $("sleepField").innerHTML = "12+";
       }
    }
    else if (circleMoving == 1){
       var tm = getTimeOfDayInt();
       if(tm  == 0){
-         $("time").innerHTML = "12:00 A.M.";
+         $("timeField").innerHTML = "12:00 A.M.";
       }
       else if(tm < 12){
-         $("time").innerHTML = tm + ":00 A.M.";
+         $("timeField").innerHTML = tm + ":00 A.M.";
       }
       else if(tm == 12){
-         $("time").innerHTML = "12:00 P.M.";
+         $("timeField").innerHTML = "12:00 P.M.";
       }
       else{
-         $("time").innerHTML = (tm % 12) + ":00 P.M.";
+         $("timeField").innerHTML = (tm % 12) + ":00 P.M.";
       }
    }
 }
@@ -204,4 +204,3 @@ function convertWeekday(i){
    }
 }
 startCanvas();
-

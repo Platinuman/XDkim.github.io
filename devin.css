@@ -62,3 +62,16 @@
   stroke: #000;
   stroke-width: 1.5px;
 }
+
+.dayField {
+	font-size: 500%;
+}
+
+.timeField {
+	font-size: 500%;
+}
+
+.sleepField {
+	font-size: 500%;
+}
+
