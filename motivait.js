@@ -181,25 +181,25 @@ function getClosestInt(f){
 function convertWeekday(i){
    switch(i){
       case 0:
-         return "Monday";
+         return "Mon";
          break;
       case 1:
-         return "Tuesday";
+         return "Tue";
          break;
       case 2:
-         return "Wednesday";
+         return "Wed";
          break;
       case 3:
-         return "Thursday";
+         return "Thu";
          break;
       case 4:
-         return "Friday";
+         return "Fri";
          break;
       case 5:
-         return "Saturday";
+         return "Sat";
          break;
       case 6:
-         return "Sunday";
+         return "Sun";
          break;
    }
 }
