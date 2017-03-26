@@ -18,7 +18,6 @@
 }
 
 .title {
-    border: 1px solid red;
     background: black;
 }
 
@@ -26,15 +25,12 @@
     width: 25%;
     float: left;
     padding: 15px;
-    border: 1px solid red;
 }
 .firstG {
     padding: 15px;
-    border: 1px solid red;
 }
 .secondG {
     padding: 15px;
-    border: 1px solid red;
 }
 .circle {
 	float:left;
@@ -83,7 +79,6 @@
 }
 .spacer {    
     line-height: 0.1em;
-    border: 1px solid red;
 }
 h1 {
 	line-height: 0.1em;
