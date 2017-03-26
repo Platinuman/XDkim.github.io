@@ -95,3 +95,13 @@ h1 {
 	line-height: 0.1em;
 	text-align: right;
 }
+button{
+	padding: 15px;
+	font-size: 24px;
+}
+select{
+		padding: 15px;
+	font-size: 24px;
+	
+}
+
