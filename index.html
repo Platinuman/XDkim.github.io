@@ -7,7 +7,7 @@
 <body>
 <div class = "title">Title</div>
 <div class = "graph">Productivity Forecast
-<div class = "firstG">Graph 1 
+<div class = "firstG">
 <svg width="300" height="200"></svg>
 <script>
 var n = 40,
@@ -45,7 +45,7 @@ g.append("g")
     .datum(data)
     .attr("class", "line")
   .transition()
-    .duration(500)
+    .duration(200)
     .ease(d3.easeLinear)
     .on("start", tick);
 function tick() {
