@@ -1,11 +1,11 @@
 function $(id){
-	return document.getElementById(id);
+        return document.getElementById(id);
 }
 var canvas = $('can');
 var context = canvas.getContext('2d');
 var mouseDown = false;
 var circlesMoving = -1;
-var circleCoords = [700,390];
+var circleCoords = [688,480];
 var circleTexts = ["","0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ", "0\t\t\t\t\t\t1\t\t\t\t\t\t2\t\t\t\t\t\t3\t\t\t\t\t\t4\t\t\t\t\t\t5\t\t\t\t\t\t6\t\t\t\t\t\t7\t\t\t\t\t\t8\t\t\t\t\t\t9\t\t\t\t\t\t10\t\t\t\t\t\t11\t\t\t\t\t\t12+\t\t\t\t\t\t", "MON\t\t\t\t\t\t\t\tTUE\t\t\t\t\t\t\t\tWED\t\t\t\t\t\t\t\tTHU\t\t\t\t\t\t\t\tFRI\t\t\t\t\t\t\t\tSAT\t\t\t\t\t\t\t\tSUN\t\t\t\t\t\t\t\t"];
 var circleRads = [125,179,242,300];
 var textStartRads = [0,0,0,0];
@@ -13,17 +13,17 @@ var circleColors = ['#ffffff','#61c8d6','#c6da3f','#ed3594'];
 var lastAng = 0;
 var lineAngle = 0;
 function getWeekdayInt(){
-   var f = getWheelFloat(2);
+   var f = getWheelFloat(3);
    var fScaled = f * 7;
    return getClosestInt(fScaled) % 7;
 }
 function getHoursSleptInt(){
-    var f = getWheelFloat(1);
+    var f = getWheelFloat(2);
    var fScaled = f * 13;
    return getClosestInt(fScaled) % 13;
 }
 function getTimeOfDayInt(){
-    var f = getWheelFloat(0);
+    var f = getWheelFloat(1);
    var fScaled = f * 24;
    return getClosestInt(fScaled) % 24;
 }
@@ -48,13 +48,13 @@ function getWheelFloat(n){
 }
 function drawCircle(x,y,radius,color){
 	context.beginPath();
-	context.arc(x, y, radius, 0, 2 * Math.PI);
-	changeColor(color);
-	context.fill();
-	changeColor('#000000');
-	context.strokeStyle = '#ffffff';
-	context.lineWidth = 5;
-	context.stroke();
+        context.arc(x, y, radius, 0, 2 * Math.PI);a
+        changeColor(color);
+        context.fill();
+        changeColor('#000000');
+        context.strokeStyle = '#ffffff';
+        context.lineWidth = 5;
+        context.stroke();
 }
 CanvasRenderingContext2D.prototype.fillTextCircle = function(text,x,y,radius,startRotation){
    var numRadsPerLetter = 2 * Math.PI / text.length;
@@ -85,10 +85,12 @@ function mouseDowned(event){
    mouseDown = true;
    var x = event.pageX;
    var y = event.pageY;
+   //console.log(x);
+   //console.log(y);
    var d = distToCenter(x,y);
    circleMoving = -1;
    var i;
-   for(i = circleRads.length - 1; i > -1; i--){
+   for(i = circleRads.length - 1; i > 0; i--){
       if(d >= circleRads[i]){
          break;
       }
@@ -105,9 +107,43 @@ function mouseMoved(event){
    var y = event.pageY;
    ang = Math.atan((y - circleCoords[1]) / (x - circleCoords[0]));
    angDif = ang - lastAng;
+   while(angDif > 2.5){
+      angDif -= Math.PI;
+   }
+   while(angDif < -2.5){
+      angDif += Math.PI;
+   }
    textStartRads[circleMoving] += angDif;
+   console.log(textStartRads[circleMoving]);
    lastAng = ang;
    addCircles();
+   if(circleMoving == 3){
+      $("dayField").innerHTML = convertWeekday(getWeekdayInt());
+   }
+   else if(circleMoving == 2){
+      var hrs = getHoursSleptInt();
+      if(hrs < 12){
+         $("sleep").innerHTML = hrs;
+      }
+      else{
+         $("sleep").innerHTML = "12+";
+      }
+   }
+   else if (circleMoving == 1){
+      var tm = getTimeOfDayInt();
+      if(tm  == 0){
+         $("time").innerHTML = "12:00 A.M.";
+      }
+      else if(tm < 12){
+         $("time").innerHTML = tm + ":00 A.M.";
+      }
+      else if(tm == 12){
+         $("time").innerHTML = "12:00 P.M.";
+      }
+      else{
+         $("time").innerHTML = (tm % 12) + ":00 P.M.";
+      }
+   }
 }
 function mouseLifted(event){
    mouseDown = false;
@@ -116,12 +152,12 @@ function changeColor(color){
    context.fillStyle = color;
 }
 function addCircles(){
-   clearCanvas();
+	clearCanvas();
    var i;
    for(i = circleRads.length - 1; i > -1; i--){
       drawCircle(300, 350, circleRads[i], circleColors[i]);
       context.font = "30px comfortaaregular";
-	context.fillStyle = "#ffffff";
+        context.fillStyle = "#ffffff";
       context.fillTextCircle(circleTexts[i],300,350,circleRads[i] - 38,textStartRads[i]);
    }
 changeColor(circleColors[3]);
@@ -142,4 +178,30 @@ function distToCenter(x, y){
 function getClosestInt(f){
    return Math.round(f);
 }
+function convertWeekday(i){
+   switch(i){
+      case 0:
+         return "Monday";
+         break;
+      case 1:
+         return "Tuesday";
+         break;
+      case 2:
+         return "Wednesday";
+         break;
+      case 3:
+         return "Thursday";
+         break;
+      case 4:
+         return "Friday";
+         break;
+      case 5:
+         return "Saturday";
+         break;
+      case 6:
+         return "Sunday";
+         break;
+   }
+}
 startCanvas();
+
