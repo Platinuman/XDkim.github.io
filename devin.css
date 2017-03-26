@@ -68,14 +68,14 @@
 }
 
 .timeField {
-	font-size: 500%;
+	font-size: 450%;
 }
 
 .sleepField {
 	font-size: 500%;
 }
 .spacer {    
-    padding: 0px;
+    line-height: 0.1em;
     border: 1px solid red;
 }
 

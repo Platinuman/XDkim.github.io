@@ -132,16 +132,16 @@ function mouseMoved(event){
    else if (circleMoving == 1){
       var tm = getTimeOfDayInt();
       if(tm  == 0){
-         $("timeField").innerHTML = "12:00 A.M.";
+         $("timeField").innerHTML = "12:00 AM";
       }
       else if(tm < 12){
-         $("timeField").innerHTML = tm + ":00 A.M.";
+         $("timeField").innerHTML = tm + ":00 AM";
       }
       else if(tm == 12){
-         $("timeField").innerHTML = "12:00 P.M.";
+         $("timeField").innerHTML = "12:00 PM";
       }
       else{
-         $("timeField").innerHTML = (tm % 12) + ":00 P.M.";
+         $("timeField").innerHTML = (tm % 12) + ":00 PM";
       }
    }
 }
