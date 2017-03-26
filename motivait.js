@@ -169,7 +169,7 @@ context.beginPath();
     context.lineTo(300+20, 10);
     context.fill();
     context.font="70px comfortaaregular";
-    context.fillText(predict(getWeekdayFloat()-1, getTimeOfDayFloat()-0.5, getHoursSleptFloat()-0.5), 688-60, 480+20);
+    context.fillText(predict(getWeekdayFloat()-0.5, getTimeOfDayFloat()-0.5, getHoursSleptFloat()-0.5), 688-60, 480+20);
 
 }
 function clearCanvas(){
