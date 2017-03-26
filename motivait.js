@@ -52,6 +52,7 @@ function drawCircle(x,y,radius,color){
 	changeColor(color);
 	context.fill();
 	changeColor('#000000');
+	context.strokeStyle = '#ffffff';
 	context.stroke();
 }
 CanvasRenderingContext2D.prototype.fillTextCircle = function(text,x,y,radius,startRotation){
