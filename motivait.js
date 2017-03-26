@@ -48,7 +48,7 @@ function getWheelFloat(n){
 }
 function drawCircle(x,y,radius,color){
 	context.beginPath();
-        context.arc(x, y, radius, 0, 2 * Math.PI);a
+        context.arc(x, y, radius, 0, 2 * Math.PI);
         changeColor(color);
         context.fill();
         changeColor('#000000');
