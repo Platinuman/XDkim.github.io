@@ -169,6 +169,7 @@ context.beginPath();
     context.lineTo(300+20, 10);
     context.fill();
     context.font="120px comfortaaregular";
+    context.fillStyle="black";
     context.fillText((Math.floor(predict(getWeekdayFloat(), getTimeOfDayFloat(), getHoursSleptFloat())*1)/1)+"%", 688-480, 480-100);
 
 }
