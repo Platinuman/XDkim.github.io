@@ -117,9 +117,9 @@ function addCircles(){
    clearCanvas();
    var i;
    for(i = circleRads.length - 1; i > -1; i--){
-      drawCircle(circleCoords[0], circleCoords[1], circleRads[i], circleColors[i]);
+      drawCircle(300, 300, circleRads[i], circleColors[i]);
       context.font = "bold 20px Serif";
-      context.fillTextCircle(circleTexts[i],circleCoords[0],circleCoords[1],circleRads[i] - 20,textStartRads[i]);
+      context.fillTextCircle(circleTexts[i],300,300,circleRads[i] - 20,textStartRads[i]);
    }
    changeColor('#000000');
    context.beginPath();
