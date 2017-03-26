@@ -16,6 +16,11 @@
     box-sizing: border-box;
     font-family: 'comfortaaregular';
 }
+.logospacer{
+	margin:0;
+	padding-left:10;
+}
+
 
 .title {
 	margin-top: 0;
