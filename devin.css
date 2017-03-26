@@ -18,7 +18,7 @@
 }
 
 .title {
-    background: black;
+    background: #ed3594;
 }
 
 .graph {
@@ -60,7 +60,7 @@
 .line {
   fill: none;
   stroke: #000;
-  stroke-width: 3px;
+  stroke-width: 6px;
 }
 
 .dayField {
