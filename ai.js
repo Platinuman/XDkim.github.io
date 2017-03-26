@@ -37,9 +37,8 @@ function predict(day, time, sleep){
 	for(i=0; i<10; i++){
 		chance+=l2[i]*output[i] 
 	}
+	chance=Math.min(100,chance);
+	chance=Math.max(0, chance);
 	console.log(chance)
 	return chance;
 }
-
-predict(.0, .5, .2);
-predict(.2, .6, .7);
