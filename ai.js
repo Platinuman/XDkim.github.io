@@ -42,4 +42,4 @@ function predict(day, time, sleep){
 }
 
 //predict(.0, .5, .2);
-predict(.2, .6, .7);
+//predict(.2, .6, .7);
