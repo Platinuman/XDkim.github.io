@@ -65,14 +65,17 @@
 
 .dayField {
 	font-size: 500%;
+	text-align: right;
 }
 
 .timeField {
 	font-size: 450%;
+	text-align: right;
 }
 
 .sleepField {
 	font-size: 500%;
+	text-align: right;
 }
 .spacer {    
     line-height: 0.1em;
