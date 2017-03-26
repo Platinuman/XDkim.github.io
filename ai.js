@@ -1,14 +1,14 @@
 	//Creation of neural network
 	//Layer one
 	var l1 = [0,0,0,0,0,0,0,0,0,0];
-	var l1_weights = [];
-	var l1_biases = [];
+	var l1_weights = [0,0,0,0,0,0,0,0,0,0];
+	var l1_biases = [0,0,0,0,0,0,0,0,0,0];
 	//Layer two
 	var l2 = [0,0,0,0,0,0,0,0,0,0];
-	var l2_weights = [];
-	var l2_biases = [];
+	var l2_weights = [0,0,0,0,0,0,0,0,0,0];
+	var l2_biases = [0,0,0,0,0,0,0,0,0,0];
 	//Output layer
-	var output = [];
+	var output = [0,0,0,0,0,0,0,0,0,0];
 
 //Initializing default values
 
@@ -16,11 +16,11 @@
 function predict(day, time, sleep){
 	var chance = 0;
 	for(i=0; i<10; i++){
-	l1_weights.push(Math.random());
-	l1_biases.push(Math.random());
-	l2_weights.push(Math.random());
-	l2_biases.push(Math.random());
-	output.push(Math.random());
+	l1_weights[i]=(Math.random());
+	l1_biases[i]=(Math.random());
+	l2_weights[i]=(Math.random());
+	l2_biases[i]=(Math.random());
+	output[i]=(Math.random());
 }	
 	for(i=0; i<10; i++){
 		l1[i]+=day*l1_weights[i] + time*l1_weights[i] + sleep*l1_weights[i];
