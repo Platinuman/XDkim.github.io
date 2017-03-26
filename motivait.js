@@ -6,12 +6,46 @@ var context = canvas.getContext('2d');
 var mouseDown = false;
 var circlesMoving = -1;
 var circleCoords = [300,300];
-var circleTexts = ["Test1", "Test2", "Test3"];
+var circleTexts = ["0\t 1\t 2\t 3\t 4\t 5\t 6\t 7\t 8\t 9\t 10\t 11\t 12\t 13\t 14\t 15\t 16\t 17\t 18\t 19\t 20\t 21\t 22\t 23\t", "0\t\t\t\t\t\t1\t\t\t\t\t\t2\t\t\t\t\t\t3\t\t\t\t\t\t4\t\t\t\t\t\t5\t\t\t\t\t\t6\t\t\t\t\t\t7\t\t\t\t\t\t8\t\t\t\t\t\t9\t\t\t\t\t\t10\t\t\t\t\t\t11\t\t\t\t\t\t12+\t\t\t\t\t\t", "Mon\t\t\t\t\t\t\t\tTue\t\t\t\t\t\t\t\tWed\t\t\t\t\t\t\t\tThu\t\t\t\t\t\t\t\tFri\t\t\t\t\t\t\t\tSat\t\t\t\t\t\t\t\tSun\t\t\t\t\t\t\t\t"];
 var circleRads = [200,250,300];
 var textStartRads = [0,0,0];
-var circleColors = ['#f92672','#a6322e','#66d9ef'];
+var circleColors = ['#61c8d6','#c6da3f','#ed3594'];
 var lastAng = 0;
 var lineAngle = 0;
+function getWeekdayInt(){
+   var f = getWheelFloat(2);
+   var fScaled = f * 7;
+   return getClosestInt(fScaled) % 7;
+}
+function getHoursSleptInt(){
+    var f = getWheelFloat(1);
+   var fScaled = f * 13;
+   return getClosestInt(fScaled) % 13;
+}
+function getTimeOfDayInt(){
+    var f = getWheelFloat(0);
+   var fScaled = f * 24;
+   return getClosestInt(fScaled) % 24;
+}
+function getWeekdayFloat(){
+   return getWeekdayInt() / 6;
+}
+function getHoursSleptFloat(){
+   return getHoursSleptInt() / 12;
+}
+function getTimeOfDayFloat(){
+   return getTimeOfDayInt() / 23;
+}
+function getWheelFloat(n){
+   var tR = textStartRads[n];
+   while(tR > Math.PI * 2){
+      tR -= Math.PI * 2;
+   }
+   while(tR < 0){
+      tR += Math.PI * 2;
+   }
+   return (Math.PI * 2 - tR) / (Math.PI * 2);
+}
 function drawCircle(x,y,radius,color){
 	context.beginPath();
 	context.arc(x, y, radius, 0, 2 * Math.PI);
@@ -45,15 +79,13 @@ function startCanvas(){
    addCircles();
 }
 function mouseDowned(event){
+   //console.log(getHoursSleptFloat());
    mouseDown = true;
    var x = event.pageX;
    var y = event.pageY;
    var d = distToCenter(x,y);
-   console.log(x);
-   console.log(y);
-   console.log(d);
    circleMoving = -1;
-   var i
+   var i;
    for(i = circleRads.length - 1; i > -1; i--){
       if(d >= circleRads[i]){
          break;
@@ -92,7 +124,7 @@ function addCircles(){
    changeColor('#000000');
    context.beginPath();
    context.moveTo(300,300);
-   context.lineTo(300,100);
+   context.lineTo(300,0);
    context.stroke();
    context.closePath();
 }
@@ -101,6 +133,9 @@ function clearCanvas(){
 }
 function distToCenter(x, y){
    return Math.sqrt((circleCoords[0] + 25 - x) * (circleCoords[0] + 25 - x) + (circleCoords[1] + 75 - y) * (circleCoords[1] + 75 - y));
+}
+function getClosestInt(f){
+   return Math.round(f);
 }
 startCanvas();
 
