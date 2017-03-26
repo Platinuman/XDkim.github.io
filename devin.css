@@ -74,4 +74,8 @@
 .sleepField {
 	font-size: 500%;
 }
+.spacer {    
+    padding: 15px;
+    border: 1px solid red;
+}
 
