@@ -10,6 +10,6 @@ weeks worth of user data to get meaningful predictions.
 
 Contributors:  
 Devin Kim    
-Eli Lifland 
+Eli Lifland   
 Aaron Ho  
 Karl Keat  
