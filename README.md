@@ -8,7 +8,8 @@ In this demo, we show what the interface for the app might look like. Currently,
 a pseudo-neural net that takes in data we generate--for this app to be functional, we suggest at least two 
 weeks worth of user data to get meaningful predictions.   
 
-Devin Kim  
-Eli Lifland  
+Contributors:  
+Devin Kim    
+Eli Lifland 
 Aaron Ho  
 Karl Keat  
